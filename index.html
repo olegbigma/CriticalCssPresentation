@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        .slide {
+            padding-top: 0;
+        }
+        img {
+            width: 100%;
+            height: 86%;
+        }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .slide th {
+            text-align: center !important;
+            font-size: 18px;
+        }
+        table td {
+            text-align: center !important;
+            font-size: 16px;
+            border: 1px solid black;
+        }
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Critical Css</h1>
+    </header>
+
+    <section class="slide">
+        <h3>Network before critical css</h3>
+        <img src="pictures/beforeNetwork.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h3>Network after critical css</h3>
+        <img src="pictures/afterNetwork1.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h3>Perfomance before critical css</h3>
+        <img src="pictures/beforeLight.png" alt="">
+    </secti>
+
+    <section class="slide">
+        <img src="pictures/beforeLight2.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h3>Perfomance after critical css</h3>
+        <img src="pictures/afterLight1.png" alt="">
+    </section>
+
+    <section class="slide">
+        <img src="pictures/afterLight2.png" alt="">
+    </section>
+
+    <section class="slide">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Perfomance</th>
+                    <th colspan="2">First Cont Paint</th>
+                    <th colspan="2">Total Blocking Time</th>
+                    <th colspan="2">Time to interactive</th>
+                    <th colspan="2">Load</th>
+                    <th colspan="2">Load DOM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Before</td>
+                    <td>After</td>
+                    <td>Before</td>
+                    <td>After</td>
+                    <td>Before</td>
+                    <td>After</td>
+                    <td>Before</td>
+                    <td>After</td>
+                    <td>Before</td>
+                    <td>After</td>
+                    <td>Before</td>
+                    <td>After</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>55</td>
+                    <td>2.7s</td>
+                    <td>1.1s</td>
+                    <td>2.4s</td>
+                    <td>2.9s</td>
+                    <td>11.8s</td>
+                    <td>11.1s</td>
+                    <td>2.68s</td>
+                    <td>4.83s</td>
+                    <td>745ms</td>
+                    <td>2.02s</td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>59</td>
+                    <td>2.0s</td>
+                    <td>1.0s</td>
+                    <td>2.4s</td>
+                    <td>3.2s</td>
+                    <td>11.3s</td>
+                    <td>12.0s</td>
+                    <td>3.20s</td>
+                    <td>3.32s</td>
+                    <td>768ms</td>
+                    <td>1.32s</td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>50</td>
+                    <td>2.0s</td>
+                    <td>1.0s</td>
+                    <td>2.1s</td>
+                    <td>3.0s</td>
+                    <td>11.7s</td>
+                    <td>11.1s</td>
+                    <td>2.46s</td>
+                    <td>2.88s</td>
+                    <td>762ms</td>
+                    <td>1.23s</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>54</td>
+                    <td>2.1s</td>
+                    <td>1.0s</td>
+                    <td>2.3s</td>
+                    <td>2.9s</td>
+                    <td>12.4s</td>
+                    <td>11.8s</td>
+                    <td>2.37s</td>
+                    <td>3.24s</td>
+                    <td>634ms</td>
+                    <td>950ms</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>58</td>
+                    <td>2.5s</td>
+                    <td>1.0s</td>
+                    <td>730ms</td>
+                    <td>3.3s</td>
+                    <td>11.3s</td>
+                    <td>11.5s</td>
+                    <td>2.41s</td>
+                    <td>2.31s</td>
+                    <td>716ms</td>
+                    <td>1.17s</td>
+                </tr>
+                <tr>
+                    <td>51.8</td>
+                    <td>55.2</td>
+                    <td>2.26s</td>
+                    <td>1.0s</td>
+                    <td>1.99s</td>
+                    <td>3.06s</td>
+                    <td>11.7s</td>
+                    <td>11.5s</td>
+                    <td>2.62s</td>
+                    <td>3.31s</td>
+                    <td>725ms</td>
+                    <td>1.34s</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="slide center">
+        <h2>Вывод</h2>
+    </section>
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+
+</body>
+</html>
